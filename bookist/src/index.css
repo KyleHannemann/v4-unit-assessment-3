@@ -1,0 +1,129 @@
+*{
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  background-color: lightgray;
+}
+#searchBar{
+  height: 10vh;
+  width: 65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  
+}
+#header{
+  height:10vh;
+  font-size: 5vw;
+ text-align: center;
+ padding-bottom: 1vw;
+ border-bottom: rgb(119, 117, 117) .5vw solid;
+ box-shadow: 1px 1px 10px;
+}
+#bookList{
+  height: 70vh;
+  width: 65vw;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  overflow: scroll;
+  border: rgb(119, 117, 117) .5vw solid;
+  box-shadow: 2px 2px 10px;
+
+  
+}
+.book{
+  height: 30vw;
+  width: 15vw;
+  position: relative;
+  margin: 2vw 2vw 2vw 2vw;
+
+  
+}
+
+
+.book > img {
+  height: 20vw;
+  width: 15vw;
+}
+.bookBut{
+  z-index: 2;
+  float: right;
+  position: absolute;
+  right: 0;
+  top:0;
+  text-align: center;
+  font-size: 3vw ;
+  background-color: lightblue;
+  border-radius: 50%;
+  
+}
+.bookBut:hover{
+  background-color: white;
+  transition: .25s;
+  cursor: pointer;
+}
+.book > div{
+  text-align: center;
+  font-size: 1.5vw;
+  overflow: auto;
+}
+.book > .title{
+  font-weight: 900;
+  font-size: 2vw;
+}
+#shelf{
+  height: 80vh;
+  width: 30vw;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  border-left: rgb(119, 117, 117) 1vw double;
+}
+#shelfTitle{
+  border-bottom: rgb(119, 117, 117) 1vw double;
+  font-size: 3vw;
+}
+.shelfItem{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 2vw;
+  width: 95%;
+  margin-top: 1vw;
+  margin-left: 2%;
+  border-bottom: 3px solid rgb(119, 117, 117) ;
+}
+.shelfItem > button {
+  font-size: 2vw;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  color: red;
+  
+}
+.shelfItem > button:hover{
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  
+}
+#clearShelf{
+  background-color: rgb(238, 113, 113);
+  font-size: 2vw;
+
+}
+#clearShelf:hover{
+  background-color: rgb(168, 2, 2);
+}
+#search{
+  font-size: 2vw;
+}
+

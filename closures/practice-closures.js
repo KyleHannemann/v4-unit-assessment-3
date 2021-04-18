@@ -9,12 +9,20 @@
   */
   
   //CODE HERE
+function myFunc(){
+  let myStr = 'super secret string';
+  function getSecretString(){
+    return myStr;
+  }
+  return getSecretString;
+}
+
 
   
   //Now create a variable called secretString. Its value should be the invocation of myFunc.
 
   //CODE HERE
-  
+ let secretString = myFunc(); 
   
   ////////////PROBLEM 2////////////
 
@@ -29,26 +37,47 @@
   */
   
   //CODE HERE
+function lightSwitch(){
+  let isLightOn = false;
+  function flipTheSwitch(){
+    if(isLightOn === false){
+      isLightOn = true;
+      return 'The light is on'
+    }
+    if(isLightOn === true){
+      isLightOn = false;
+      return 'The light is off'
+    }
+  }
+  return flipTheSwitch;
+}
 
   
   //Create a variable called kitchenSwitch whose value is the invocation of lightSwitch.
   
   //CODE HERE
 
+  let kitchenSwitch = lightSwitch();
+
+
   
   //Invoke kitchenSwitch.
 
   //CODE HERE
-  
+kitchenSwitch();
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
   //CODE HERE
-  
+ let bathroomSwitch = lightSwitch();
+
   
   //Invoke bathroomSwitch twice.
   
   //CODE HERE
+bathroomSwitch()
+
+bathroomSwitch()
 
   
   
@@ -62,8 +91,26 @@
       - 'waterPlant' should add 1 to the height and return the new height
       - 'prunePlant' should subtract 1 from the height and return the new height
   */
-
+let x = plantTracker();
+let y = x.readInfo();
+y
   //CODE HERE
+function plantTracker(){
+  let plant = 'fern';
+  let height = 12;
+  function readInfo(){
+    return `This is a ${plant} plant that is ${height} inches tall.`
+  }
+  function waterPlant(){
+    height += 1;
+    return height;
+  }
+  function prunePlant(){
+    height -= 1;
+    return height;
+  }
+  return{readInfo, waterPlant, prunePlant};
+}
 
 
   ////////////PROBLEM 4////////////
@@ -79,6 +126,21 @@
   */
 
   //CODE HERE
+function inventory(){
+  let products = [];
+  function readProducts(){
+    return products;
+  }
+  function addToProducts(str){
+    products.push(str);
+  }
+  function deleteFromProducts(str){
+    while(products.indexOf(str) != -1){
+      products.splice(products.indexOf(str), 1)
+    }
+  }
+  return{readProducts, addToProducts, deleteFromProducts}
+}
 
 
   /*
@@ -86,11 +148,11 @@
   */
 
   //CODE HERE
-
+let shoes = inventory();
 
   /*
     Add an item to your shoes array using the addToProducts function
   */
 
   //CODE HERE
-
+shoes.addToProducts('shoes')
