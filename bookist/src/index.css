@@ -15,10 +15,9 @@ body{
   
 }
 #header{
-  height:10vh;
-  font-size: 5vw;
+  height:8vh;
+  font-size: 6vh;
  text-align: center;
- padding-bottom: 1vw;
  border-bottom: rgb(119, 117, 117) .5vw solid;
  box-shadow: 1px 1px 10px;
 }
@@ -53,11 +52,12 @@ body{
 .bookBut{
   z-index: 2;
   float: right;
+  font-weight: 900;
   position: absolute;
   right: 0;
   top:0;
   text-align: center;
-  font-size: 3vw ;
+  font-size: 4vw ;
   background-color: lightblue;
   border-radius: 50%;
   
